@@ -1,1 +1,27 @@
 php -S 0.0.0.0:8080 -t public public/index.php
+
+API
+a.	Return the entire dataset
+GET http://0.0.0.0:8080/api/persons
+
+b.	Filter by a person’s eye colour, please note there are only 3 variations of eye colour
+GET http://0.0.0.0:8080/api/persons/eye/color/:color
+
+c.	Return all the friends of each persons in a flat array of objects
+GET http://0.0.0.0:8080/api/persons/friends
+
+d. 	Insert a new person into the person’s dataset
+POST http://0.0.0.0:8080/api/persons/add
+--------------------------------------------------
+
+ANGULAR APP
+http://0.0.0.0:8080
+
+Route Persons
+http://0.0.0.0:8080/#/persons
+
+Route Person Detail
+http://0.0.0.0:8080/#/person/:id
+
+Route Insert Person
+http://0.0.0.0:8080/#/insert
