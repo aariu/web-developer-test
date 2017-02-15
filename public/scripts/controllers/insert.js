@@ -12,6 +12,7 @@ angular.module('webDevTestApp')
     
   	$scope.insertUser = function() {
 
+  		// Check input value
   		if ($scope.name == '' || $scope.name == undefined || $scope.name == null) return;
 
   		Global.insertUser($scope.name).then(function(){});

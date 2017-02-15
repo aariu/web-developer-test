@@ -10,28 +10,31 @@
 angular.module('webDevTestApp')
   .controller('PersonsCtrl', function ($scope, $http, Global) {  	
 
+    // Get dataset
     Global.getPersons().then(function(persons){
         $scope.persons = persons;
         $scope.updateMap(0);
         console.log($scope.persons);
     });      
 
+    // Avarage balance of visible items
     $scope.getAverageBalance = function()
     {
     	var length = $scope.filteredPersons.length;
     	var total = 0;
 
-    $scope.filteredPersons.forEach( function (item)
-		{
-      if (item['balance'] != undefined) {
-        var balance = parseFloat(item['balance'].replace('$', '').replace(',', ''));
-        total += balance;
-      }		        		
+        $scope.filteredPersons.forEach( function (item)
+    	{
+          if (item['balance'] != undefined) {
+            var balance = parseFloat(item['balance'].replace('$', '').replace(',', ''));
+            total += balance;
+          }		        		
 		});    	
 
 		return parseFloat(total / length).toFixed(2);
     }
 
+    // Avarage age of visible items
     $scope.getAverageAge = function()
     {
     	var length = $scope.filteredPersons.length;
@@ -46,6 +49,7 @@ angular.module('webDevTestApp')
     }
     
 
+    // Google Map
     $scope.updateMap = function(index)
     {
         console.log(index);

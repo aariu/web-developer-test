@@ -1,3 +1,5 @@
+// Utility functions
+
 angular.module('webDevTestApp')
 	.service('Global', function($http, $location) {
     

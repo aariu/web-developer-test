@@ -10,7 +10,9 @@
 angular.module('webDevTestApp')
   .controller('PersonCtrl', function ($scope, $routeParams, Global) {
     
-    console.log($routeParams.id);       
+    console.log($routeParams.id);
+
+    // Get Person Detail by id       
     Global.getPersons().then(function(persons){
         $scope.person = Global.getPersonById($routeParams.id, persons);
 		console.log($scope.person);	

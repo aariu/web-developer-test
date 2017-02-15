@@ -39,6 +39,7 @@ angular
         redirectTo: '/persons'
       });
 
+      // Google Maps
       uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyCLGeu6bzpd5uNBd7q-zEZgF4rc_kdUTJw',
         v: '3.20', //defaults to latest 3.X anyhow
