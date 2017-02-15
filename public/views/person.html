@@ -1,0 +1,51 @@
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+        <div class="col-lg-12">
+            
+            <div class="main-box no-header clearfix">
+                <div class="main-box-body clearfix">
+                    <div class="table-responsive person">
+                        <div class="person_row">
+                            <img src="{{ person.picture }}"></img>
+                            <div class="person_name"> {{ person.name }} </div>   
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Company </div>
+                            <div class="person_value"> {{ person.company }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Age </div>
+                            <div class="person_value"> {{ person.age }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Address </div>
+                            <div class="person_value"> {{ person.address }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Email </div>
+                            <div class="person_value"> {{ person.email }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Eye color </div>
+                            <div class="person_value"> {{ person.eyeColor }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Balance </div>
+                            <div class="person_value"> {{ person.balance }} </div>
+                        </div>
+                        <div class="person_row">
+                            <div class="person_label"> Status </div>
+                            <div class="person_value" ng-if="person.isActive">
+                               <span class="label label-success">Active</span>
+                            </div>    
+                            <div class="person_value" ng-if="!person.isActive">
+                              <span class="label label-danger">Inactive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
